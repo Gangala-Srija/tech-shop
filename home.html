@@ -11,6 +11,9 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    *::selection{
+      background-color: red;
+    }
      .nav-item:hover .search {
       display: block !important;
       z-index: 1000;
@@ -41,6 +44,23 @@
       top: 10px;
       align-content: center;
       margin-left: -15%;
+    }
+    .user-form {
+      display: none;
+      top: 110%; /* Position below the icon */
+      right: 0; /* Align with the right edge of the icon */
+      z-index: 1000; /* Ensure it appears above other content */
+      min-width: 300px; /* Prevent form from being too narrow */
+    }
+
+    /* Show form on hover */
+    .nav-item:hover .user-form {
+      display: block;
+    }
+
+    /* Ensure the next container is not displaced */
+    .content-container {
+      margin-top: 0; /* No extra margin needed since form is absolute */
     }
 
     .live {
@@ -84,6 +104,9 @@
         grid-template-columns: 1fr;
       }
     }
+    .item_div:hover{
+      background-color: red;
+    }
     
   </style>
 </head>
@@ -105,7 +128,7 @@
         </div>
         <div class="nav-item position-relative me-5">
           <a href="#" class="nav-link text-white">
-            <i class="fa-solid fa-cart-shopping"></i><sup class="bg-danger h5 rounded-circle">4</sup>
+            <i class="fa-solid fa-cart-shopping"></i><sup class="bg-danger badge rounded-circle">4</sup>
           </a>
           <div class="shopping position-absolute bg-dark" style="display: none;">
             <div class="card p-2 bg-dark">
@@ -113,13 +136,28 @@
             </div>
           </div>
         </div>
-        <a href="#" class="nav-link me-5 text-white">
+        <!-- <a href="#" class="nav-link me-5 text-white">
           <i class="fas fa-user"></i>
-        </a>
+        </a> -->
+        <div class="nav-item position-relative me-5">
+            <a href="#" class="nav-link text-white">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <span class="visually-hidden">User Profile</span>
+            </a>
+            <form class="user-form position-absolute border border-secondary-subtle rounded-end bg-opacity-75 bg-dark text-white p-4">
+              <div class="mb-3">
+                <p class="mb-0 opacity-50">Hello!</p>
+                <p class="opacity-50">Access account and manage orders</p>
+                <button type="submit" class="btn border-secondary-subtle rounded-end bg-opacity-75 text-white opacity-50">Login/Signup</button>
+                <hr>
+                <p class="opacity-50">Please Login</p>
+              </div>
+            </form>
+          </div>
       </div>
     </div>
   </nav>
-  <form
+  <!-- <form
     class="float-end d-none border border-secondary-subtle rounded-end bg-opacity-75 bg-dark text-white w-25 p-4 ">
     <div class="mb-3">
 
@@ -130,7 +168,7 @@
       <hr>
       <p>Please Login</p>
     </div>
-  </form>
+  </form> -->
 
   <section>
 
@@ -175,24 +213,16 @@
           </div>
         </div>
       </div>
-      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> -->
     </div>
     <h3 class="text-center mt-3">Featured Products</h3>
     <h3 class="text-center mt-3">Top Products</h3>
     <div class=" p-4 ps-5">
       <ul class=" d-flex justify-content-around  ps-5 pe-5 list-unstyled ">
-        <li class="bg-danger ps-3 pe-3">All</li>
-        <li>Headphones</li>
-        <li>Earbuds</li>
-        <li>Earphones</li>
-        <li>Neckbands</li>
+        <li class=" item_div bg-danger ps-3 pe-3">All</li>
+        <li class="item_div">Headphones</li>
+        <li class="item_div">Earbuds</li>
+        <li class="item_div">Earphones</li>
+        <li class="item_div">Neckbands</li>
       </ul>
     </div>
     <div>
