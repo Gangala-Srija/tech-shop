@@ -1,0 +1,114 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white ms-5" href="#">Tech-Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="d-flex ms-auto">
+          <div class="nav-item position-relative me-5">
+            <!-- <a href="#" class="nav-link text-white">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </a> -->
+            <a href="#" data-bs-toggle="tooltip" 
+            data-bs-placement="bottom" data-bs-title="Tooltip on bottom"><i class="fas fa-search"></i>
+            </a>
+              <!-- <span class="visually-hidden">Search</span> -->
+            <!-- <div class="search position-absolute bg-dark" style="top: 100%; right: 0; display: none;">
+              <div class="card p-2 bg-dark">
+                <p class="mb-0 text-white">Search</p>
+              </div> -->
+            </div>
+          </div>
+          <div class="nav-item position-relative me-5">
+            <a href="#"  class="nav-link text-white" id="cart-icon">
+              <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+              <sup class="bg-danger badge rounded-circle">4</sup>
+              <!-- <span class="visually-hidden">Cart</span> -->
+            </a>
+            <!-- <div class="shopping position-absolute bg-dark" style="top: 100%; right: 0; display: none;">
+              <div class="card p-2 bg-dark">
+                <p class="mb-0 text-white">Cart</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="nav-item position-relative me-5">
+            <a href="#" class="nav-link text-white">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <!-- <span class="visually-hidden">User Profile</span> -->
+            </a>
+            <form
+              class="user-form position-absolute border border-secondary-subtle rounded-end bg-opacity-75 bg-dark text-white p-4">
+              <div class="mb-3">
+                <p class="mb-0 opacity-50">Hello!</p>
+                <p class="opacity-50">Access account and manage orders</p>
+                <button type="button"
+                  class="btn border-secondary-subtle rounded-end bg-opacity-75 text-white opacity-50"
+                  onclick="toggleSignupForm()">Login/Signup</button>
+                <hr>
+                <p class="opacity-50">Please Login</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="signup-form container w-25 ">
+    <div class="card shadow bg-dark border-secondary-subtle text-white position-relative">
+      <button type="button" class="close-btn btn btn-link text-white" onclick="toggleSignupForm()">✕</button>
+      <h4 class="mt-2">Sign Up</h4>
+      <div class="d-flex">
+        <p class="opacity-50">Already have an account?</p>
+        <span class="text-white">Login</span>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark border-secondary-subtle text-white" id="username"
+              placeholder="Username" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control bg-dark border-secondary-subtle text-white" id="email"
+              placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+
+            <input type="password" class="form-control bg-dark border-secondary-subtle text-white" id="password"
+              placeholder="Password" required>
+          </div>
+          <div class="mb-3">
+
+            <input type="password" class="form-control bg-dark border-secondary-subtle text-white" id="confirmPassword"
+              placeholder="Confirm Password" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-danger">Sign Up</button>
+          </div>
+          <div class="slash mt-3 text-center opacity-50">
+            -------Or Login With---------
+          </div>
+          <div class="buttons mt-3 d-flex justify-content-center gap-2">
+            <button type="button" class="btn bg-primary text-white">Facebook</button>
+            <button type="button" class="btn bg-danger text-white">Google</button>
+            <button type="button" class="btn bg-info text-white">Twitter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+     function toggleSignupForm() {
+      const signupForm = document.querySelector('.signup-form');
+      signupForm.classList.toggle('active');
+    }
+    document.getElementById("cart-icon").addEventListener("click", function (event) {
+      event.preventDefault(); // Prevents jumping to top
+      const cartContainer = document.getElementById("cart-container");
+
+      // Toggle display
+      if (cartContainer.style.display === "none" || cartContainer.style.display === "") {
+        cartContainer.style.display = "block";
+      } else {
+        cartContainer.style.display = "none";
+      }
+    });
