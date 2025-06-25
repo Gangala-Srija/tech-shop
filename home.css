@@ -1,3 +1,6 @@
+body {
+      padding-top: 70px; 
+    }
 *::selection {
     background-color: red;
 }
@@ -77,4 +80,10 @@
 
 .card-wrapper {
     display: flex;
+}
+ .item_div{
+    font-size: 20px;
+} 
+.item_div:hover{
+    background-color: red;
 }
