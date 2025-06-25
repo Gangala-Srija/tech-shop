@@ -75,6 +75,26 @@
       flex: 0 0 auto;
       margin-right: 1rem;
     }
+   
+    .card-wrapper{
+      transform: scale(1.2,1.2);
+      animation-name: image-center;
+      transition: transform;
+      transition-timing-function: ease-in-out;
+      transition-duration:0ms;
+    }
+    @keyframes image-center {
+      0%{
+        transform: scale(1,1);
+      }
+      50%{
+        transform: scale(1.2,1.2);
+
+      }
+      100%{
+        transform: scale(1,1);
+      }
+    }
     @keyframes scroll-left {
       0% {
         transform: translateX(0);
@@ -83,9 +103,9 @@
         transform: translateX(-100%);
       }
     }
-    .card-wrapper:hover {
+    /* .card-wrapper:hover {
       animation-play-state: paused;
-    }
+    } */
   </style>
 </head>
 <body class="bg-dark">

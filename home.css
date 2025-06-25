@@ -1,0 +1,60 @@
+*::selection {
+    background-color: red;
+}
+
+.text {
+    top: 10px;
+    align-content: center;
+    margin-left: -20%;
+}
+
+.live {
+    margin-top: -7%;
+}
+
+.over {
+    margin-top: -5%;
+}
+
+.noise {
+    margin-top: -5%;
+}
+.user-dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      width:300px;
+      position: absolute;
+      right:-15px;
+      top:25px;
+  }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    width: 100% !important;
+    /* Override inline width */
+}
+
+.card-img-top {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 992px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
