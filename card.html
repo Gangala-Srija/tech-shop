@@ -67,23 +67,23 @@
       width: 100%;
       position: relative;
     }
-    .card-wrapper {
+     .card-wrapper {
       display: flex;
-      animation: scroll-left 20s linear infinite;
-    }
-    .card {
+      /* animation: scroll-left 20s linear infinite; */
+    } 
+    /* .card {
       flex: 0 0 auto;
       margin-right: 1rem;
-    }
+    } */
    
-    .card-wrapper{
+    /* .card-wrapper{
       transform: scale(1.2,1.2);
       animation-name: image-center;
       transition: transform;
       transition-timing-function: ease-in-out;
       transition-duration:0ms;
-    }
-    @keyframes image-center {
+    } */
+    /* @keyframes image-center {
       0%{
         transform: scale(1,1);
       }
@@ -102,7 +102,7 @@
       100% {
         transform: translateX(-100%);
       }
-    }
+    } */
     /* .card-wrapper:hover {
       animation-play-state: paused;
     } */
@@ -112,57 +112,31 @@
   <div class="container my-5">
     <div class="card-container">
       <div class="card-wrapper">
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
+        <div class="card p-3 ps-5 me-2 bg-dark text-white" style="width: 14rem;">
           <p class="opacity-75 mb-5">JBL Endurance Run Sports</p>
           <img src="/images/products/jbl-endu-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
           <p><i class="fa-solid fa-indian-rupee-sign"></i>999 <del><i class="fa-solid fa-indian-rupee-sign"></i>1,599</del></p>
         </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
+        <div class="card p-3 ps-5  me-2 bg-dark text-white" style="width: 14rem;">
           <p class="opacity-75 mb-5">boAt Airdopes 203</p>
           <img src="/images/products/boat203-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
           <p><i class="fa-solid fa-indian-rupee-sign"></i>1,074 <del><i class="fa-solid fa-indian-rupee-sign"></i>3,999</del></p>
         </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
+        <div class="card p-3 ps-5 me-2 bg-dark text-white" style="width: 14rem;">
           <p class="opacity-75 mb-5">boAt Rockerz 518</p>
           <img src="/images/products/boat518-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
           <p><i class="fa-solid fa-indian-rupee-sign"></i>1,299 <del><i class="fa-solid fa-indian-rupee-sign"></i>3,990</del></p>
         </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
+        <div class="card p-3 ps-5 me-2 bg-dark text-white" style="width: 14rem;">
           <p class="opacity-75 mb-5">JBL Tune 760NC</p>
           <img src="/images/products/jbl760nc-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
           <p><i class="fa-solid fa-indian-rupee-sign"></i>5,999 <del><i class="fa-solid fa-indian-rupee-sign"></i>7,999</del></p>
         </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
+        <div class="card p-3 ps-5  me-2 bg-dark text-white" style="width: 14rem;">
           <p class="opacity-75 mb-5">boAt Rockerz 255</p>
           <img src="/images/products/boat255r-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
           <p><i class="fa-solid fa-indian-rupee-sign"></i>899 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
         </div>
-        <!-- Duplicate cards for seamless looping -->
-        <!-- <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
-          <p class="opacity-75 mb-5">JBL Endurance Run Sports</p>
-          <img src="/images/products/boat110-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
-          <p><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
-        </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
-          <p class="opacity-75 mb-5">JBL Endurance Run Sports</p>
-          <img src="/images/products/boat110-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
-          <p><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
-        </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
-          <p class="opacity-75 mb-5">JBL Endurance Run Sports</p>
-          <img src="/images/products/boat110-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
-          <p><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
-        </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
-          <p class="opacity-75 mb-5">JBL Endurance Run Sports</p>
-          <img src="/images/products/boat110-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
-          <p><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
-        </div>
-        <div class="card p-3 ps-5 bg-dark text-white" style="width: 15rem;">
-          <p class="opacity-75 mb-5">JBL Endurance Run Sports</p>
-          <img src="/images/products/boat110-1.png" class="card-img-top w-50 mb-4" alt="JBL Endurance Run Sports">
-          <p><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
-        </div> -->
       </div>
     </div>
   </div>
