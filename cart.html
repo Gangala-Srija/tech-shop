@@ -12,8 +12,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      padding-top: 70px; 
+      padding-top: 70px;
     }
+
     *::selection {
       background-color: red;
     }
@@ -46,18 +47,35 @@
       left: 570px;
       top: 23px;
     }
-    .col-md-4 .form-control::placeholder{
-      
-    color: rgba(255, 255, 255, 0.5) !important;
-}
-    
+
+    .col-md-4 .form-control::placeholder {
+
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .user-dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu {
+      width: 300px;
+      position: absolute;
+      right: -15px;
+      top: 25px;
+    }
+
+    .modal-body .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
   </style>
 </head>
 
 <body class="bg-dark">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid ">
-      <a class="navbar-brand text-white ms-5" href="#"><h3>Tech-Shop</h3></a>
+      <a class="navbar-brand text-white ms-5" href="#">
+        <h3>Tech-Shop</h3>
+      </a>
       <div class="d-flex ms-auto">
         <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="search"
           class="nav-link me-3 text-white"><i class="fas fa-search "></i></a>
@@ -65,9 +83,64 @@
           class="nav-link me-3 text-white"><i class="fa-solid fa-cart-shopping"></i>
           <sup class="bg-danger badge rounded-circle">4</sup>
         </a>
-        <a href="#" class="nav-link me-3 text-white"><i class="fas fa-user "></i> </a>
+        <div class="user-dropdown dropdown me-5">
+          <a href="#" class="nav-link text-white" data-bs-toggle="dropdown">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu bg-dark border border-secondary-subtle text-white p-3">
+            <p class="mb-0 text-white">Hello!</p>
+            <p class="text-white opacity-75">Access account and manage orders</p>
+            <a href="#" class="btn btn-outline-light btn-sm w-50 opacity-75" data-bs-toggle="modal"
+              data-bs-target="#signupModal">Login/Signup</a>
+            <hr class="border-secondary-subtle">
+            <p class="text-white opacity-75">Please Login</p>
+          </div>
+        </div>
       </div>
     </div>
+  </nav>
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark border border-secondary-subtle w-75">
+        <div class="modal-body p-4">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-2"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+          <h4 class="text-white mb-3">Sign Up</h4>
+          <div class="d-flex  mb-3">
+            <p class="text-white me-1 opacity-50">Already have an account?</p>
+            <span class="text-white">Login</span>
+          </div>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control bg-dark border-secondary-subtle " placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control bg-dark border-secondary-subtle " placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control bg-dark border-secondary-subtle " placeholder="Password"
+                required>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control bg-dark border-secondary-subtle" placeholder="Confirm Password"
+                required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-danger ">Sign Up</button>
+            </div>
+            <div class="text-center mt-3 text-white">-------Or Login With--------</div>
+            <div class="d-flex justify-content-between gap-2 mt-3">
+              <button type="button" class="btn btn-primary  ps-4 pe-4">Facebook</button>
+              <button type="button" class="btn btn-danger   ps-4 pe-4">Google</button>
+              <button type="button" class="btn btn-info text-white  ps-4 pe-4">Twitter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
   </nav>
   <div id="cart-container">
     <div class=" custom-scroll overflow-scroll  rounded-4 bg-dark d-flex ms-5"
@@ -83,8 +156,8 @@
               <p class="opacity-50">JBL Live 66ONC Wireless Over-Ear NC Headphones</p>
               <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="remote button"
                 class=" remote nav-link text-white bg-dark"><i class=" trash fa-solid fa-trash ms-4"></i> </a>
-              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>9,999 <del><i
-                    class="fa-solid fa-indian-rupee-sign"></i>14,999</del></p>
+              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>9,999 <span class="opacity-50 text-decoration-line-through ms-2"><i
+                    class="fa-solid fa-indian-rupee-sign"></i>14,999</span></p>
               <div class="d-flex border border-secondary w-25 justify-content-between">
                 <div class="bg-secondary w-25 text-center">-</div>
                 <div class="text-danger">1</div>
@@ -102,8 +175,8 @@
               <p class="opacity-50">boAt Rockerz 518 On-Ear Wireless Headphones</p>
               <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="remote button"
                 class=" remote nav-link text-white bg-dark"><i class=" trash fa-solid fa-trash ms-4"></i> </a>
-              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>9,999 <del><i
-                    class="fa-solid fa-indian-rupee-sign"></i>14,999</del></p>
+              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>9,999 <span class="opacity-50 text-decoration-line-through ms-2"><i
+                    class="fa-solid fa-indian-rupee-sign"></i>14,999</span></p>
               <div class="d-flex border border-secondary w-25 justify-content-between">
                 <div class="bg-secondary w-25 text-center">-</div>
                 <div class="text-danger">1</div>
@@ -120,8 +193,8 @@
               <p class="opacity-50">boAt Airdopes 131 Wireless In-Ear Earbuds</p>
               <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="remote button"
                 class=" remote nav-link text-white bg-dark"><i class=" trash fa-solid fa-trash ms-4"></i> </a>
-              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i
-                    class="fa-solid fa-indian-rupee-sign"></i>2,990</del></p>
+              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <span class="opacity-50 text-decoration-line-through ms-2"><i
+                    class="fa-solid fa-indian-rupee-sign"></i>2,990</span></p>
               <div class="d-flex border border-secondary w-25 justify-content-between">
                 <div class="bg-secondary w-25 text-center">-</div>
                 <div class="text-danger">1</div>
@@ -138,8 +211,8 @@
               <p class="opacity-50">boAt BassHeads 110 In-Ear Wired Earphones</p>
               <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="remote button"
                 class=" remote nav-link text-white bg-dark"><i class=" trash fa-solid fa-trash ms-4"></i> </a>
-              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>499 <del><i
-                    class="fa-solid fa-indian-rupee-sign"></i>999</del></p>
+              <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>499 <span class="opacity-50 text-decoration-line-through ms-2"><i
+                    class="fa-solid fa-indian-rupee-sign"></i>999</span></p>
               <div class="d-flex border border-secondary w-25 justify-content-between">
                 <div class="bg-secondary w-25 text-center">-</div>
                 <div class="text-danger">1</div>
